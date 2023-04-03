@@ -8,6 +8,7 @@ import Tools.ModelJTable;
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 public class FrmMenu extends JFrame{
     private JPanel pnlRoot;
@@ -43,7 +44,12 @@ public class FrmMenu extends JFrame{
         mesCaptages.add(cap1);mesCaptages.add(cap2);
         mesCaptages.add(for1);mesCaptages.add(for2);
         mesCaptages.add(cuve1);mesCaptages.add(cuve2);
+        Collections.sort(mesCaptages);
         mdl.loadDatasCaptage(mesCaptages);
         tblCaptages.setModel(mdl);
+
+//        List<Captage> list = new ArrayList<Captage>();
+//        list = mesCaptages;
+//        System.out.println(Collections.sort(list));
     }
 }
